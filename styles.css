@@ -1,0 +1,290 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+    margin: 4px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background: white;
+    cursor: pointer;
+}
+
+.filters button.active {
+    background: black;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-items: end;
+    align-items: end;
+    gap: 8px;
+}
+
+.edit-btn, .delete-btn{
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.edit-btn{
+    border-color: #4a5565;
+    color:#4a5565 ;
+    background-color: transparent;
+
+}
+.delete-btn{
+    border-color: red;
+    color:red ;
+    background-color: transparent;
+
+}
+
+.add-btn {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card{
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.priority {
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.high{
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.low {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #eee;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ===== EDIT FORM CONTAINER ===== */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* ===== GROUP ===== */
+.edit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edit-group label {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ===== INPUTS ===== */
+.edit-group input,
+.edit-group textarea,
+.edit-group select {
+  width: 100%;
+  padding: 8px 10px;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+  font-size: 14px;
+}
+
+.edit-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ===== ROW (DESKTOP SPLIT) ===== */
+.edit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* tablet+ */
+@media (min-width: 768px) {
+  .edit-row {
+    flex-direction: row;
+  }
+
+  .edit-row .edit-group {
+    flex: 1;
+  }
+}
+
+/* ===== BUTTONS ===== */
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary:hover {
+  background: #f1f1f1;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.text-red {
+    color: red;
+}
+.text-orange {
+    color: orange;
+}
+.text-yellow {
+    color: goldenrod;
+}
+.text-green {
+    color: green;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.checkbox {
+    display:  flex;
+    align-items: center;
+    gap: 8px;
+}
+.checkbox p{
+    color: #4a5565;
+}
